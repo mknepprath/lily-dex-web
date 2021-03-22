@@ -30,6 +30,18 @@
   min-height: 460px;
   max-height: 560px;
 }
+@media (max-width: 640px) {
+  .hero {
+    height: 170vh;
+    min-height: inherit;
+    max-height: inherit;
+  }
+}
+@media (max-width: 440px) {
+  .hero {
+    height: 130vh;
+  }
+}
 
 .header {
   display: flex;
@@ -53,6 +65,11 @@
   padding: 1.5rem;
   text-align: left;
   transition: color 0.15s ease, border-color 0.15s ease;
+}
+@media (max-width: 640px) {
+  .panel {
+    flex-basis: 90%;
+  }
 }
 
 .preview {
@@ -160,7 +177,7 @@
   line-height: 1.5;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .grid {
     width: 100%;
     flex-direction: column;

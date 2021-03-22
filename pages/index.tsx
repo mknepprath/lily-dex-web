@@ -62,7 +62,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h3>Current GO Dex</h3>
+            <h3>Current GO Dex ✨</h3>
             <p>
               lily dex is dedicated to Pokémon GO, Pokémon are added as they are
               released in-game.
@@ -70,7 +70,7 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <h3>Raid Bosses</h3>
+            <h3>Raid Bosses ✨</h3>
             <p>
               See the current raid bosses and get recommendations when one
               you're missing becomes available.
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <h3>Shiny Tracking</h3>
+            <h3>Shiny Tracking ✨</h3>
             <p>
               For an extra challenge, mark the shiny Pokémon you've captured to
               complete your shiny dex.
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <h3>Widgets</h3>
+            <h3>Widgets ✨</h3>
             <p>
               See the your current Pokédex total along with recently captured
               Pokémon on your home screen.

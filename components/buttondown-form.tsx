@@ -8,7 +8,7 @@ const ButtondownForm = () => (
     onSubmit={() =>
       window.open("https://buttondown.email/mknepprath", "popupwindow")
     }
-    className="embeddable-buttondown-form"
+    className={"embeddable-buttondown-form " + styles.form}
   >
     <label htmlFor="bd-email">Enter your email </label>
     <input type="email" name="email" id="bd-email" className={styles.input} />
