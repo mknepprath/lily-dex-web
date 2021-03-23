@@ -5,9 +5,9 @@ const ButtondownForm = () => (
     action="https://buttondown.email/api/emails/embed-subscribe/mknepprath"
     method="post"
     target="popupwindow"
-    onSubmit={() =>
-      window.open("https://buttondown.email/mknepprath", "popupwindow")
-    }
+    onSubmit={() => {
+      window.open("https://buttondown.email/mknepprath", "popupwindow");
+    }}
     className={"embeddable-buttondown-form " + styles.form}
   >
     <label htmlFor="bd-email">Enter your email </label>

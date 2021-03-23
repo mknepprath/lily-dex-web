@@ -64,7 +64,7 @@ export default function Home() {
           <div className={styles.card}>
             <h3>Current GO Dex ✨</h3>
             <p>
-              lily dex is dedicated to Pokémon GO, Pokémon are added as they are
+              lily dex is dedicated to Pokémon GO. Pokémon are added as they are
               released in-game.
             </p>
           </div>
@@ -93,16 +93,58 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        <div className={styles.grid}>
+          <div className={styles.thanks}>
+            <p>
+              Thank you to{" "}
+              <a
+                href="https://pogoapi.net"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                The PoGo API
+              </a>{" "}
+              for providing the data used in this app. Feel free to tweet at{" "}
+              <a
+                href="https://twitter.com/PoGoAPI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @PoGoAPI
+              </a>{" "}
+              if the data is out of date, but please verify on their{" "}
+              <a
+                href="https://pogoapi.net/Is_It_Released/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Is It Released
+              </a>{" "}
+              page before doing so.
+            </p>
+          </div>
+        </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://mknepprath.com/writing/lily-dex"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Built by Michael Knepprath
-        </a>
+        <p>
+          <a
+            href="https://mknepprath.com/writing/lily-dex"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Built by Michael Knepprath
+          </a>{" "}
+          •{" "}
+          <a
+            href="https://twitter.com/mknepprath"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Say Hi!
+          </a>
+        </p>
       </footer>
     </div>
   );
