@@ -31,7 +31,7 @@ export default function Home() {
                 <a className={styles.logo} href="/">
                   <img src="/lily-dex-icon.png" alt="lily dex icon" />
                 </a>
-                <h1>lily dex</h1>
+                <h1 data-cy="home-page">lily dex</h1>
               </header>
               <h2>
                 Track the Pokémon you've captured in Pokémon GO! lily dex is a
