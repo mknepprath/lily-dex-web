@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.8.10",
-    "@types/react": "^18.2.34",
+    "@types/react": "^18.2.35",
     "cypress": "^13.4.0",
     "typescript": "^5.2.2"
   }
