@@ -1,6 +1,6 @@
 // https://developer.apple.com/app-store/marketing/guidelines/#section-badges
 
-const AppStoreBadge = (): JSX.Element => (
+const AppStoreBadge = () => (
   <svg
     id="livetype"
     xmlns="http://www.w3.org/2000/svg"
