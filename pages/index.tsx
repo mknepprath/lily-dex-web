@@ -1,7 +1,7 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import AppStoreBadge from "../components/app-store-badge";
-import ButtondownForm from "../components/buttondown-form";
 
 import styles from "../styles/Home.module.css";
 
@@ -11,10 +11,13 @@ export default function Home() {
       <Head>
         <title>lily dex</title>
         <link rel="icon" href="/lily-dex-icon.png" />
+        <meta
+          name="description"
+          content="Track the Pokemon you've captured in Pokemon GO. lily dex is a dead-simple app for Pokedex completionists."
+        />
       </Head>
 
       <div className={styles.section + " " + styles.hero}>
-        {/* https://css-tricks.com/creating-non-rectangular-headers/ */}
         <svg
           className={styles.divider}
           xmlns="http://www.w3.org/2000/svg"
@@ -34,8 +37,8 @@ export default function Home() {
                 <h1 data-cy="home-page">lily dex</h1>
               </header>
               <h2>
-                Track the Pokémon you've captured in Pokémon GO! lily dex is a
-                dead-simple app for Pokédex completionists.
+                Track the Pokemon you've captured in Pokemon GO! lily dex is a
+                dead-simple app for Pokedex completionists.
               </h2>
               <a href="https://apps.apple.com/us/app/lily-dex/id1525132070">
                 <AppStoreBadge />
@@ -45,6 +48,7 @@ export default function Home() {
               <img
                 className={styles.preview}
                 src="/lily-dex-screenshot-2.png"
+                alt="lily dex app screenshot"
               />
             </div>
           </div>
@@ -52,25 +56,17 @@ export default function Home() {
       </div>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Join the Mailing List</h1>
-
-        <p className={styles.description}>
-          Sign up for updates as we prepare to launch lily dex.
-        </p>
-
-        <ButtondownForm />
-
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h3>Current GO Dex ✨</h3>
+            <h3>Current GO Dex</h3>
             <p>
-              lily dex is dedicated to Pokémon GO. Pokémon are added as they are
-              released in-game.
+              lily dex is dedicated to Pokemon GO. Pokemon are added
+              automatically as they are released in-game.
             </p>
           </div>
 
           <div className={styles.card}>
-            <h3>Raid Bosses ✨</h3>
+            <h3>Raid Bosses</h3>
             <p>
               See the current raid bosses and get recommendations when one
               you're missing becomes available.
@@ -78,18 +74,34 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <h3>Shiny Tracking ✨</h3>
+            <h3>PvP Battle Rankings</h3>
             <p>
-              For an extra challenge, mark the shiny Pokémon you've captured to
+              Browse top-ranked Pokemon for Great, Ultra, and Master League with
+              optimal movesets and matchup data.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <h3>Shiny Tracking</h3>
+            <p>
+              For an extra challenge, mark the shiny Pokemon you've captured to
               complete your shiny dex.
             </p>
           </div>
 
           <div className={styles.card}>
-            <h3>Widgets ✨</h3>
+            <h3>Detailed Stats</h3>
             <p>
-              See the your current Pokédex total along with recently captured
-              Pokémon on your home screen.
+              View base stats, moves, evolution requirements, buddy distance,
+              optimal PvP IVs, and second charge move costs.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <h3>Widgets</h3>
+            <p>
+              See your current Pokedex total along with recently captured Pokemon
+              on your home screen.
             </p>
           </div>
         </div>
@@ -97,31 +109,34 @@ export default function Home() {
         <div className={styles.grid}>
           <div className={styles.thanks}>
             <p>
-              Thank you to{" "}
+              Data aggregated from{" "}
               <a
-                href="https://pogoapi.net"
+                href="https://github.com/PokeMiners/game_masters"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                The PoGo API
-              </a>{" "}
-              for providing the data used in this app. Feel free to tweet at{" "}
+                PokeMiners Game Master
+              </a>
+              ,{" "}
               <a
-                href="https://twitter.com/PoGoAPI"
+                href="https://pvpoke.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @PoGoAPI
-              </a>{" "}
-              if the data is out of date, but please verify on their{" "}
+                PvPoke
+              </a>
+              , and{" "}
               <a
-                href="https://pogoapi.net/Is_It_Released/"
+                href="https://pokemon-go-api.github.io/pokemon-go-api/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Is It Released
-              </a>{" "}
-              page before doing so.
+                Pokemon GO API
+              </a>
+              .{" "}
+              <Link href="/docs">
+                API Documentation
+              </Link>
             </p>
           </div>
         </div>
@@ -136,14 +151,10 @@ export default function Home() {
           >
             Built by Michael Knepprath
           </a>{" "}
-          •{" "}
-          <a
-            href="https://twitter.com/mknepprath"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Say Hi!
-          </a>
+          &bull;{" "}
+          <Link href="/docs">
+            API Docs
+          </Link>
         </p>
       </footer>
     </div>
