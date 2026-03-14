@@ -79,6 +79,25 @@ const endpoints = [
     description: "Special research and field research quest data.",
   },
   {
+    name: "Events",
+    path: "/events.json",
+    description:
+      "Pokemon GO events parsed from the GO Calendar ICS feed. Timestamps are naive (no timezone) so they can be interpreted in the user's local timezone, matching how Pokemon GO events work.",
+    fields: [
+      { name: "id", type: "string", desc: "Unique event identifier" },
+      { name: "summary", type: "string", desc: "Original ICS summary with tag prefix" },
+      { name: "tag", type: "string", desc: "Event type tag (CD, RB, RH, SH, MM, MB, GBL, E, R, RD, GP, PGF)" },
+      { name: "title", type: "string", desc: "Clean event title without tag prefix" },
+      { name: "description", type: "string", desc: "Event description text" },
+      { name: "startDate", type: "string", desc: "Start date/time as naive string (e.g. 2026-03-14T14:00:00)" },
+      { name: "endDate", type: "string", desc: "End date/time as naive string" },
+      { name: "isAllDay", type: "boolean", desc: "Whether this is an all-day event" },
+      { name: "url", type: "string | null", desc: "Leek Duck event page URL" },
+      { name: "imageURL", type: "string | null", desc: "Event image URL" },
+      { name: "pokemonDexNrs", type: "number[]", desc: "Matched Pokemon national dex numbers" },
+    ],
+  },
+  {
     name: "Meta",
     path: "/meta.json",
     description:
@@ -131,9 +150,13 @@ export default function Docs() {
             <a href="https://pvpoke.com" target="_blank" rel="noopener noreferrer">
               PvPoke
             </a>
-            , and the{" "}
+            , the{" "}
             <a href="https://pokemon-go-api.github.io/pokemon-go-api/" target="_blank" rel="noopener noreferrer">
               Pokemon GO API
+            </a>
+            , and the{" "}
+            <a href="https://github.com/othyn/go-calendar" target="_blank" rel="noopener noreferrer">
+              GO Calendar
             </a>
             .
           </p>
@@ -265,6 +288,10 @@ export default function Docs() {
             <li>
               <strong>Pokemon GO API</strong> — localized names, raid bosses,
               types, sprites
+            </li>
+            <li>
+              <strong>GO Calendar</strong> — event schedule (Community Days,
+              Raid Hours, Spotlight Hours, GO Fest, etc.)
             </li>
           </ul>
         </section>
