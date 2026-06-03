@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Docs.module.css";
 
 const BASE_URL = "https://mknepprath.github.io/lily-dex-api";
+const API_VERSION = "v1.1.0";
 
 const endpoints = [
   {
@@ -133,7 +134,7 @@ export default function Docs() {
             />
             lily dex
           </Link>
-          <span className={styles.version}>API v1.1.0</span>
+          <span className={styles.version}>API {API_VERSION}</span>
         </div>
       </header>
 

@@ -1,6 +1,6 @@
 // https://developer.apple.com/app-store/marketing/guidelines/#section-badges
 
-const AppStoreBadge = () => (
+const AppStoreBadge: React.FC = () => (
   <svg
     id="livetype"
     xmlns="http://www.w3.org/2000/svg"
