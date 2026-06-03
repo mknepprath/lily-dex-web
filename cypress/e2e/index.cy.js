@@ -1,5 +1,5 @@
 describe("Home", () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit("/");
   });
 
@@ -28,7 +28,7 @@ describe("Home", () => {
 });
 
 describe("Docs", () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit("/docs");
   });
 
