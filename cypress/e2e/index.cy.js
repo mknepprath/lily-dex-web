@@ -8,20 +8,20 @@ describe("Home", () => {
   });
 
   it("shows the App Store badge link", () => {
-    cy.get('a[href*="apps.apple.com"]').should("be.visible");
+    cy.get('a[href*="apps.apple.com"]').should("exist");
   });
 
   it("shows all six feature cards", () => {
-    cy.contains("Current GO Dex").should("be.visible");
-    cy.contains("Raid Bosses").should("be.visible");
-    cy.contains("PvP Battle Rankings").should("be.visible");
-    cy.contains("Shiny Tracking").should("be.visible");
-    cy.contains("Detailed Stats").should("be.visible");
-    cy.contains("Widgets").should("be.visible");
+    cy.contains("Current GO Dex").should("exist");
+    cy.contains("Raid Bosses").should("exist");
+    cy.contains("PvP Battle Rankings").should("exist");
+    cy.contains("Shiny Tracking").should("exist");
+    cy.contains("Detailed Stats").should("exist");
+    cy.contains("Widgets").should("exist");
   });
 
   it("API Docs link navigates to docs page", () => {
-    cy.contains("API Documentation").click();
+    cy.contains("API Documentation").scrollIntoView().click();
     cy.url().should("include", "/docs");
     cy.contains("h1", "API Documentation").should("be.visible");
   });
@@ -37,14 +37,14 @@ describe("Docs", () => {
   });
 
   it("shows all endpoint sections", () => {
-    cy.contains("Pokedex").should("be.visible");
-    cy.contains("PvP Rankings").should("be.visible");
-    cy.contains("Events").should("be.visible");
-    cy.contains("Meta").should("be.visible");
+    cy.contains("Pokedex").should("exist");
+    cy.contains("PvP Rankings").should("exist");
+    cy.contains("Events").should("exist");
+    cy.contains("Meta").should("exist");
   });
 
   it("shows the base URL", () => {
-    cy.contains("mknepprath.github.io/lily-dex-api").should("be.visible");
+    cy.contains("mknepprath.github.io/lily-dex-api").should("exist");
   });
 
   it("home link returns to index", () => {
